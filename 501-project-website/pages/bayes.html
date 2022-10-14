@@ -50,18 +50,26 @@
     
     <h1>HW-1: Data Preparation</h1>
     
-    <a href="./htmls/acquire_clean_text_data.html">acquire and clean the text data</a>
+    <a href="./htmls/acquire_clean_text_data.html">1.acquire and clean the text data</a>
     
     <p>the data comes from twitter API</p> 
     
-    <a href="./htmls/clean_record_data.html">prepare the record data</a>
+    <a href="./htmls/clean_record_data.html">2.prepare the record data</a>
     
     <p>After cleaning the data, this is the heat map of the correlation matrix of all the variables.</p>
     
-    <img src="../images/correlation.png" width="420" height="360">
+    <img src="../images/correlation.png" width="630" height="540">
     
     <h1>HW-2: Naive Bayes (NB) in R with Labeled Record Data</h1>
+    
     <a href="./htmls/record_data_R.html">use naive bayes to train the record data and results</a>
+    
+    <p>This data has 7 X variables: Gender, Married or not,	Age, Graduated or not, Work Experience, Spending Score and Family Size. The label includes 4 classification: A, B, C, D. During the data preparation process, 
+    all the X variables are converted to numeric type and the y label is also converted to 1,2,3,4. Then I break data into 80-20 training/test sets. Since the variables are discrete, I use Multinomial Naive Bayes classification method to train the model. 
+    Finally, the accuracy is 0.4397 (where accuracy=0.25 means the model is absolutely useless). The heatmap of confusion matrix is as follows. The result shows that the performance of this model is not so good. From the matrix we can see that the model 
+    is more confused with catagory B and C.</p>
+    
+    <img src="../images/confusion matrix.png" width="630" height="540">
     
     <h1>HW-3: Naive Bayes (NB) in Python with Labeled Text Data</h1>
     <a href="./htmls/NB_text_data.html">use naive bayes to train the text data and results</a>
