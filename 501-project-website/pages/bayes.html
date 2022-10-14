@@ -67,14 +67,29 @@
     <p>This data has 7 X variables: Gender, Married or not,	Age, Graduated or not, Work Experience, Spending Score and Family Size. The label includes 4 classification: A, B, C, D. During the data preparation process, 
     all the X variables are converted to numeric type and the y label is also converted to 1,2,3,4. Then I break data into 80-20 training/test sets. Since the variables are discrete, I use Multinomial Naive Bayes classification method to train the model. 
     Finally, the accuracy is 0.4397 (where accuracy=0.25 means the model is absolutely useless). The heatmap of confusion matrix is as follows. The result shows that the performance of this model is not so good. From the matrix we can see that the model 
-    is more confused with catagory B and C.</p>
+    is more confused between catagory B and C.</p>
     
     <img src="../images/confusion matrix.png" width="630" height="540">
     
     <h1>HW-3: Naive Bayes (NB) in Python with Labeled Text Data</h1>
+    
     <a href="./htmls/NB_text_data.html">use naive bayes to train the text data and results</a>
     
-    <p>you can see detailed .ipynb and .rmd files in "code/Naive Bayes"</p> 
+    <p>The label of this text data has two catagories: "freeway" and "metro". The goal of this naive bayes model is to recognize the right catagory (freeway or metro) from a paragraph. During the data preparation process, I first filter out unwanted char and words
+    , such as "#$%^"... Then I break apart every paragraph to single words and compute word number of each paragraph, finally covert the text data to one-hot matrix. Following is a heatmap of distance matrix of sentence vectors for a subset of data.</p>
+    
+    <img src="../images/distance.png" width="630" height="540">
+    
+    <p>Then I use PCA to create a pairplot of first 10 principle components.</p>
+    
+    <img src="../images/pairplot.png" width="800" height="700">
+    
+    <p>The data is broken into 80-20 training/test sets. Since the one-hot matrix obviously contains discrete data, I use Multinomial Naive Bayes classification method to train the model.
+    The accuracy on train data set is 94.39 while the accuracy on test data set is 92.38, which means this model performs quite well on both data sets and does not overfit. A heatmap of confusion matrix is as follows.</p>
+    
+    <img src="../images/confusion matrix py.png" width="630" height="540">
+    
+    <p>* you can see detailed .ipynb and .rmd files in "code/Naive Bayes"</p> 
 
 
 
