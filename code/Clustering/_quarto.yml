@@ -1,0 +1,16 @@
+project:
+  type: book
+  output-dir: docs
+  
+book:
+  title: Clustering
+  author: Wendi Chu
+  chapters:
+    - index.ipynb
+    - part: models
+      chapters:
+        - ./clustering.ipynb
+      
+format:
+  html:
+    theme: united
