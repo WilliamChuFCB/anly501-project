@@ -1,106 +1,399 @@
-
 <!DOCTYPE html>
-<html>
-    
-<head>
-    <title>501 project</title>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-    <!-- point to css stylesheet -->
-    <link rel="stylesheet" href="styles.css">
- 
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.242">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Wendi Chu">
+
+<title>501-project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
 </head>
 
+<body class="nav-sidebar floating">
 
-<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Code</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Data Gathering</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Data Cleaning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exploring Data</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Machine Learning</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Naive Bayes</a>
+              <a class="dropdown-item" href="#">Decision Trees</a>
+              <a class="dropdown-item" href="#">SVM</a>
+              <a class="dropdown-item" href="./pages/clustering/clustering.html">Clustering</a>
+              <a class="dropdown-item" href="#">ARM and Networking</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Conclusions</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-
-
-<!-- HEADER BAR -->
-<ul>
-    <!-- link back to homepage -->
-    <li><a href="./index.html">About me</a></li>
-    
-    <!-- tab without dropdown  -->
-    <li><a href="./pages/introduction.html">Introduction</a></li>
-    
-    <li><a href="https://github.com/anly501/anly-501-project-WilliamChuFCB">Code</a></li>
-
-    <li><a href="...">Data</a></li>
-
-    <li><a href="./pages/data_gathering.html">Data Gathering</a></li>
-
-    <li><a href="./pages/data_cleaning.html">Data Cleaning</a></li>
-
-    <li><a href="./pages/exploring_data.html">Exploring Data</a></li>
-    
-    <li><a href="./pages/bayes.html">Naive Bayes</a></li>
-
-    <li><a href="./pages/SVM_DT/DT_record_data.html">Decision Trees</a></li>
-
-    <li><a href="./pages/SVM_DT/SVM_text_data.html">SVM</a></li>
-
-    <li><a href="./pages/clustering/clustering.html">Clustering</a></li>
-
-    <li><a href="./pages/arm_and_networking.html">ARM and Networking</a></li>
-    <!-- tab with dropdown -->
-    <!-- <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Data Modeling</a>
-        
-        <div class="dropdown-content">
-          
-        <a href="./pages/clustering.html">Clustering</a>
-        <a href="./pages/arm_and_networking.html">ARM and Networking</a>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">501-project</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">501-project</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
-    </li> -->
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About Me</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me">About Me</a>
+  <ul class="collapse">
+  <li><a href="#my-first-exposure-to-data-science" id="toc-my-first-exposure-to-data-science" class="nav-link" data-scroll-target="#my-first-exposure-to-data-science">My first exposure to data science</a></li>
+  <li><a href="#experience-with-data-science" id="toc-experience-with-data-science" class="nav-link" data-scroll-target="#experience-with-data-science">Experience with data science</a></li>
+  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">Skills</a></li>
+  <li><a href="#personal-information" id="toc-personal-information" class="nav-link" data-scroll-target="#personal-information">Personal Information:</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">501-project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Wendi Chu </p>
+          </div>
+  </div>
     
-    <li><a href="./pages/conclusions.html">Conclusions</a></li>
+  
     
-    
+  </div>
+  
+
+</header>
+
+<section id="about-me" class="level1">
+<h1>About Me</h1>
+<p><img src="images/my_photo.jpeg" width="320" height="455"></p>
+<p>Hi! I am Wendi Chu, a graduate student of DSAN program. I come from China and my undergraduate school is Tongji University in Shanghai. I studied statistics during my undergraduate period, thus I have used a lot of statistical modeling methods to process different types of data. My dream is to work as a data scientist in a big tech company and that’s why I am studying in this program to get more familiar with the world of data science. During spare time, I am a crazy fan of soccer. My favorite sport star is Messi, who is one of the greatest soccer players of all time. I also love to join many other sports, ranging from basketball, table tennis to swimming and cycling. Additionally, I enjoy playing the guitar and listening to pop music. Feel free to contact me through WeChat or email.</p>
+<section id="my-first-exposure-to-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="my-first-exposure-to-data-science">My first exposure to data science</h2>
+<p>My first exposure to data science occurred three years ago when my professor recommended me some courses on Coursera by Andrew Ng about deep neural networks. It was extremely fascinating to see how the use of data was able to simulate and generate insights to many aspects of the world we live in. More specifically, as a soccer fan, I was impressed when I learned that the success rate of goal kick can be roughly estimated by the placement of the ball. Driven by my curiosity and interest, I finished several Coursera courses in succession, including Deep Learning, Convolutional Neural Network, and Hyperparameter tuning. Submerged in the world of data, I felt as if I was a magician when I constructed different neural network models to recognize a cat or detect a car from multiple pictures. This experience was the start of my journey to the world of data science and I dream to use these data science methods to bring tangible benefits to certain fields, such as facilitating the improvement of techniques and tactics of the soccer team in my country or promoting the image recognition accuracy of self-driving vehicles.</p>
+</section>
+<section id="experience-with-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="experience-with-data-science">Experience with data science</h2>
+<p><strong>1. Research and Intern</strong></p>
+<ul>
+<li>SITP Project of Tongji University (Python):<br>
+Feature Recognition and Reconstruction of Porous Media Based on CNN
+<ul>
+<li>Constructed a Convolutional Neural Network with Pytorch and ADAM optimization algorithm to recognize the characteristics of porous materials, such as Beadpack and Berea</li>
+<li>Utilized GAN to reconstruct 3D images of porous media that meet those characteristics given by the CNN above in order to create multiple replicable samples for material scientists</li>
+</ul></li>
+<li>Data Analyst Intern at Tongcheng
+<ul>
+<li>Used Presto SQL to associate and query the user table, order table and user buried point table, involving a total of 1.5 billion lines of data and 3.8 million effective independent users</li>
+<li>Built an index system and analyzed the operation of each month in 2021 from the perspectives of business volume, conversion rate and retention rate according to different cities and different user channels, then drew visual reports using Power BI software</li>
+</ul></li>
+</ul>
+<p><strong>2. Competitions</strong></p>
+<ul>
+<li>2020 SAS China Data Analytics Championship:<br>
+Evaluation of the Safety and Effectiveness of the Diabetes Drugs
+<ul>
+<li>Applied non-parametric statistics methods, involving Wilcoxon rank sum test and Fisher exact test, to analyze the safety and effectiveness of experimental drugs and placebos</li>
+<li>Utilized Logistic regression and decision trees to dig up possible factors, including age, BMI and diastolic pressure that considerably affect the efficacy of diabetes drugs</li>
+<li>Designed the third phase clinical trial of the diabetes drugs based on analysis of previous data from a second phase clinical trial, which involves 204 subjects</li>
+<li>Won the 2nd prize nationally(ranking 21st)</li>
+</ul></li>
+<li>National College Mathematical Modeling Competition:<br>
+Fitting and optimization of furnace temperature curve based on ODE model
+<ul>
+<li>Constructed a differential equation model based on Newton Cooling Equation and Stefan Boltzmann Law, synthetically considering thermal convection and thermal radiation</li>
+<li>Used Euler Method to seek the solution of established differential equation and found out the change law of furnace temperature</li>
+</ul></li>
+<li>Mathematical Modeling Competition of Tongji University:<br>
+Establishment of Medical Resource Allocation Model under Epidemic Situation
+<ul>
+<li>Set up the minimum cost flow model combined with greedy algorithm to find the optimal medical material transportation scheme considering both time and cost</li>
+<li>Built 0-1 programming model and general integer programming model according to constraint conditions including distance, medical level and population</li>
+<li>Utilized Lingo to obtain the most reasonable connection scheme between streets and hospitals in case of emergency epidemic situation</li>
+</ul></li>
+</ul>
+</section>
+<section id="skills" class="level2">
+<h2 class="anchored" data-anchor-id="skills">Skills</h2>
+<ul>
+<li><p>Programming Languages/Softwares: Python, R, SQL, SAS, MATLAB</p></li>
+<li><p>Languages: Mandarin (native), English (fluent)</p></li>
+</ul>
+</section>
+<section id="personal-information" class="level2">
+<h2 class="anchored" data-anchor-id="personal-information">Personal Information:</h2>
+<ul>
+<li>Name: Wendi Chu</li>
+<li>NetID: wc777</li>
+<li>Email: wc777@georgetown.edu</li>
+<li>WeChat: WilliamChuFCB</li>
 </ul>
 
 
-<!-- USE A TABLE TO ORGANIZE/FORMAT THE WEBPAGE -->
-<table>
-    <!--TABLE ROW-1-->
-   <tr>
-      <!--ROW-1 COL-1-->
-      <td>
-            <img src="images/my_photo.jpeg" width="320" height="455">
-      </td>
-      
-      <!--ROW-1 COL-2-->
-      <td>
-            
-        <h2 style="text-align:left; color:blue;">About me</h2>
-        
-        <p  style="font-size:18px;">I am Wendi Chu, a graduate student of DSAN program. I come from China and my undergraduate school is Tongji University in Shanghai. I studied statistics during my undergraduate period, thus I have used a lot of statistical modeling methods to process different types of data. My dream is to work as a data scientist in a big tech company and that's why I am studying in this program to get more familiar with the world of data science. During spare time, I am a crazy fan of soccer. My favorite sport star is Messi, who is one of the greatest soccer players of all time. I also love to join many other sports, ranging from basketball, table tennis to swimming and cycling. Additionally, I enjoy playing the guitar and listening to pop music. Feel free to contact me through WeChat or email.</p>
+</section>
+</section>
 
-      </td>
-         
-         
-   </tr>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
 
-    <!--ROW-2-->
-   <tr>
-      <!--ROW-2 COL-1-->
-      <td>
-        
-
-        <h2 style="text-align:left; color:blue;">Personal Information</h2>
-            
-        <p> - Name: Wendi Chu </p> 
-        <p> - NetID: wc777 </p> 
-        <p> - Email: wc777@georgetown.edu </p> 
-        <p> - WeChat: WilliamChuFCB</p> 
-     
- 
-      </td>
-      
-      
-   </tr>
-   
-</table>
 
 
-</body>
-</html>
+</body></html>

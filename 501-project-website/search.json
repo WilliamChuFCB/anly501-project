@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "501-project",
+    "section": "",
+    "text": "About Me\nHi! I am Wendi Chu, a graduate student of DSAN program. I come from China and my undergraduate school is Tongji University in Shanghai. I studied statistics during my undergraduate period, thus I have used a lot of statistical modeling methods to process different types of data. My dream is to work as a data scientist in a big tech company and that’s why I am studying in this program to get more familiar with the world of data science. During spare time, I am a crazy fan of soccer. My favorite sport star is Messi, who is one of the greatest soccer players of all time. I also love to join many other sports, ranging from basketball, table tennis to swimming and cycling. Additionally, I enjoy playing the guitar and listening to pop music. Feel free to contact me through WeChat or email."
+  },
+  {
+    "objectID": "index.html#my-first-exposure-to-data-science",
+    "href": "index.html#my-first-exposure-to-data-science",
+    "title": "501-project",
+    "section": "My first exposure to data science",
+    "text": "My first exposure to data science\nMy first exposure to data science occurred three years ago when my professor recommended me some courses on Coursera by Andrew Ng about deep neural networks. It was extremely fascinating to see how the use of data was able to simulate and generate insights to many aspects of the world we live in. More specifically, as a soccer fan, I was impressed when I learned that the success rate of goal kick can be roughly estimated by the placement of the ball. Driven by my curiosity and interest, I finished several Coursera courses in succession, including Deep Learning, Convolutional Neural Network, and Hyperparameter tuning. Submerged in the world of data, I felt as if I was a magician when I constructed different neural network models to recognize a cat or detect a car from multiple pictures. This experience was the start of my journey to the world of data science and I dream to use these data science methods to bring tangible benefits to certain fields, such as facilitating the improvement of techniques and tactics of the soccer team in my country or promoting the image recognition accuracy of self-driving vehicles."
+  },
+  {
+    "objectID": "index.html#experience-with-data-science",
+    "href": "index.html#experience-with-data-science",
+    "title": "501-project",
+    "section": "Experience with data science",
+    "text": "Experience with data science\n1. Research and Intern\n\nSITP Project of Tongji University (Python):\nFeature Recognition and Reconstruction of Porous Media Based on CNN\n\nConstructed a Convolutional Neural Network with Pytorch and ADAM optimization algorithm to recognize the characteristics of porous materials, such as Beadpack and Berea\nUtilized GAN to reconstruct 3D images of porous media that meet those characteristics given by the CNN above in order to create multiple replicable samples for material scientists\n\nData Analyst Intern at Tongcheng\n\nUsed Presto SQL to associate and query the user table, order table and user buried point table, involving a total of 1.5 billion lines of data and 3.8 million effective independent users\nBuilt an index system and analyzed the operation of each month in 2021 from the perspectives of business volume, conversion rate and retention rate according to different cities and different user channels, then drew visual reports using Power BI software\n\n\n2. Competitions\n\n2020 SAS China Data Analytics Championship:\nEvaluation of the Safety and Effectiveness of the Diabetes Drugs\n\nApplied non-parametric statistics methods, involving Wilcoxon rank sum test and Fisher exact test, to analyze the safety and effectiveness of experimental drugs and placebos\nUtilized Logistic regression and decision trees to dig up possible factors, including age, BMI and diastolic pressure that considerably affect the efficacy of diabetes drugs\nDesigned the third phase clinical trial of the diabetes drugs based on analysis of previous data from a second phase clinical trial, which involves 204 subjects\nWon the 2nd prize nationally(ranking 21st)\n\nNational College Mathematical Modeling Competition:\nFitting and optimization of furnace temperature curve based on ODE model\n\nConstructed a differential equation model based on Newton Cooling Equation and Stefan Boltzmann Law, synthetically considering thermal convection and thermal radiation\nUsed Euler Method to seek the solution of established differential equation and found out the change law of furnace temperature\n\nMathematical Modeling Competition of Tongji University:\nEstablishment of Medical Resource Allocation Model under Epidemic Situation\n\nSet up the minimum cost flow model combined with greedy algorithm to find the optimal medical material transportation scheme considering both time and cost\nBuilt 0-1 programming model and general integer programming model according to constraint conditions including distance, medical level and population\nUtilized Lingo to obtain the most reasonable connection scheme between streets and hospitals in case of emergency epidemic situation"
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "501-project",
+    "section": "Skills",
+    "text": "Skills\n\nProgramming Languages/Softwares: Python, R, SQL, SAS, MATLAB\nLanguages: Mandarin (native), English (fluent)"
+  },
+  {
+    "objectID": "index.html#personal-information",
+    "href": "index.html#personal-information",
+    "title": "501-project",
+    "section": "Personal Information:",
+    "text": "Personal Information:\n\nName: Wendi Chu\nNetID: wc777\nEmail: wc777@georgetown.edu\nWeChat: WilliamChuFCB"
+  }
+]
