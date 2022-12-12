@@ -1,0 +1,13 @@
+project:
+  type: book
+  output-dir: docs
+  
+book:
+  title: Naive Bayes
+  author: Wendi Chu
+  chapters:
+    - index.ipynb
+
+format:
+  html:
+    theme: united
