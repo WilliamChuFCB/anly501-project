@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.242">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Wendi Chu">
+
+<title>Data Gathering</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Data Gathering</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Gathering</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction of data gathering</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction-of-data-gathering" id="toc-introduction-of-data-gathering" class="nav-link active" data-scroll-target="#introduction-of-data-gathering">Introduction of data gathering</a></li>
+  <li><a href="#data-gathering-process" id="toc-data-gathering-process" class="nav-link" data-scroll-target="#data-gathering-process">Data gathering process</a>
+  <ul class="collapse">
+  <li><a href="#us-monthly-transportation-statistics" id="toc-us-monthly-transportation-statistics" class="nav-link" data-scroll-target="#us-monthly-transportation-statistics">1. US Monthly Transportation Statistics</a></li>
+  <li><a href="#text-data-from-twitter-api" id="toc-text-data-from-twitter-api" class="nav-link" data-scroll-target="#text-data-from-twitter-api">2. Text data from Twitter API</a></li>
+  <li><a href="#travel-mode-choice-data" id="toc-travel-mode-choice-data" class="nav-link" data-scroll-target="#travel-mode-choice-data">3. Travel mode choice data</a></li>
+  <li><a href="#driving-behavior-data" id="toc-driving-behavior-data" class="nav-link" data-scroll-target="#driving-behavior-data">4. Driving behavior data</a></li>
+  <li><a href="#taxi-price-data" id="toc-taxi-price-data" class="nav-link" data-scroll-target="#taxi-price-data">5. Taxi price data</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Data Gathering</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Wendi Chu </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction-of-data-gathering" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-of-data-gathering">Introduction of data gathering</h2>
+<p>Data gathering is known as the process to collect and analyze data from various sources in order to find answers to data science problems. In this page, I will introduce the whole process of gathering valuable data for this project, ranging from the raw data source to basic images that illustrates these datasets.</p>
+<p>Transportation is a relatively big and abstract topic. In order to answer the data science questions about this topic, I need to find different kinds of datasets. The first dimension is different types of data. To be specific, there are many different types of datasets, including labeled data, qualitative data, quantitative data, temporal data, text data, Geo data, etc. This study will cover three different types: record data, text data and temporal data. The second dimension is different scales of data. It is known to all, transportation is so important that it not only influences the life of every single person, but plays a big role in a country’s macro-economy as well. Therefore, to systematically understanding the role of transportation, it is appropriate to use both “big scale data” about economy and government and “small scale data” about citizens and everyday life at the same time.</p>
+</section>
+<section id="data-gathering-process" class="level2">
+<h2 class="anchored" data-anchor-id="data-gathering-process">Data gathering process</h2>
+<section id="us-monthly-transportation-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="us-monthly-transportation-statistics">1. US Monthly Transportation Statistics</h3>
+<p>The data is downloaded from Kaggle and is originally from the U.S. Department of Transportation Bureau of Transportation Statistics. The Bureau of Transportation Statistics brings together the latest data from across the Federal government and transportation industry. This table contains mainly quantitative data and temporal data. There are many columns involving important data for the project, such as Highway Vehicle Miles Traveled, State and Local Government Construction Spending. Obviously, this is a typical “big scale data” defined above. Here’s a screenshot of this table.</p>
+<p><img src="images1/data1.png" width="1000" height="500"></p>
+<p>From this screenshot of the data, we can easily find that every row represent a single day while every column contains different variables of record data related to transportation of the whole nation.</p>
+<p>Link to download this data:<br>
+https://www.kaggle.com/datasets/thaddeussegura/us-monthly-transportation-statistics/download?datasetVersionNumber=1</p>
+</section>
+<section id="text-data-from-twitter-api" class="level3">
+<h3 class="anchored" data-anchor-id="text-data-from-twitter-api">2. Text data from Twitter API</h3>
+<p>I use Twitter API to respectively acquire searching results of “freeway” and “metro”. This is obviously text data and it contains users’ text documents in their tweets.</p>
+<p>Tweets about “freeway” is as follows:</p>
+<p><img src="images1/tweet_freeway.jpeg" width="800" height="500"></p>
+<p>Tweets about “metro” is as follows:</p>
+<p><img src="images1/tweet_metro.jpeg" width="800" height="500"></p>
+<p>According to these two screenshots, we can see that the data contains many characters that are difficult to process, like emojis. Thus, in further analysis of this data, I will first drop out the unwanted characters and also do some other data cleaning process for this text data.</p>
+<p>You can find this data in my Github repository:<br>
+https://github.com/anly501/anly-501-project-WilliamChuFCB/tree/main/data<br>
+This data mentioned above is named “tweet_freeway.csv” and “tweet_metro.csv” respectively.</p>
+<p>Also, you can access to my code that utilizes API to acquire the data:<br>
+https://github.com/anly501/anly-501-project-WilliamChuFCB/tree/main/code<br>
+Relevant codes are located in “Data gathering” file.</p>
+</section>
+<section id="travel-mode-choice-data" class="level3">
+<h3 class="anchored" data-anchor-id="travel-mode-choice-data">3. Travel mode choice data</h3>
+<p>This dataset comes from statsmodels.org. It contains information of passengers’ different choice of travel mode.</p>
+<p>The meanings of variables are as follows:<br>
+TTME - terminal waiting time<br>
+INVC - in vehicle cost for all stages<br>
+INVT - travel time (in-vehicle time) for all stages<br>
+GC - generalized cost measure:invc+(invt*value of travel time savings)<br>
+HINC - household income<br>
+PSIZE - traveling group size</p>
+<p><img src="images1/travel_mode.jpeg" width="500" height="700"></p>
+<p>From this screenshot, we can see that this data is a typical record data for classificaiton. In further analysis process, it is proper to utilize a series of different types of machine learning algorithms to do the classification.</p>
+<p>You can find the data here:<br>
+https://www.statsmodels.org/dev/datasets/generated/modechoice.html</p>
+</section>
+<section id="driving-behavior-data" class="level3">
+<h3 class="anchored" data-anchor-id="driving-behavior-data">4. Driving behavior data</h3>
+<p>This is a kaggle dataset about driving behavior. Aggressive driving behavior is the leading factor of road traffic accidents. Aggressive driving includes speeding, sudden breaks and sudden left or right turns. All these events are reflected on accelerometer and gyroscope data. This dataset contains value at different directions of accelerometer and gyroscope.</p>
+<p><img src="images1/driving_behavior.jpeg" width="500" height="560"></p>
+<p>Obviously, this is also a record data ideal for classification. The target variable “Class” has three different categories: Normal, Aggressive and Slow. It is possible to train a classification model to predict the driving behavior type based on accelerometer and gyroscope data.</p>
+<p>You can find this data here:<br>
+https://www.kaggle.com/datasets/outofskills/driving-behavior?select=train_motion_data.csv</p>
+</section>
+<section id="taxi-price-data" class="level3">
+<h3 class="anchored" data-anchor-id="taxi-price-data">5. Taxi price data</h3>
+<p>This is a kaggle data about taxi price and is originally provided by an Indian cab aggregator service Sigma Cabs. This data is ideal for building a predictive model, which could help predict the surgepricingtype pro-actively. This would in turn match the right cabs with the right customers quickly and efficiently.</p>
+<p>The meanings of different variables are as follows:</p>
+<ul>
+<li>Trip_ID: ID for TRIP</li>
+<li>Trip_Distance: The distance for the trip requested by the customer</li>
+<li>TypeofCab: Category of the cab requested by the customer</li>
+<li>CustomerSinceMonths: Customer using cab services since n months; 0 month means current month</li>
+<li>LifeStyleIndex: Proprietary index created by Sigma Cabs showing lifestyle of the customer based on their behaviour</li>
+<li>ConfidenceLifeStyle_Index: Category showing confidence on the index mentioned above</li>
+<li>Destination_Type: Sigma Cabs divides any destination in one of the 14 categories.</li>
+<li>Customer_Rating: Average of life time ratings of the customer till date</li>
+<li>CancellationLast1Month: Number of trips cancelled by the customer in last 1 month</li>
+<li>Var1, Var2 and Var3: Continuous variables masked by the company. Can be used for modelling purposes</li>
+<li>Gender: Gender of the customer</li>
+<li>SurgePricingType: Target (can be of 3 types)</li>
+</ul>
+<p><img src="images1/taxi.jpeg" width="800" height="500"></p>
+<p>From this screenshot, we can see that there exist many missing values. Data cleaning and dealing with those missing values must be taken into consideration.</p>
+<p>You can find this data here:<br>
+https://www.kaggle.com/datasets/arashnic/taxi-pricing-with-mobility-analytics?select=sigma_cabs.csv</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

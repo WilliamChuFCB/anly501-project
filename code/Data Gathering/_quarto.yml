@@ -1,0 +1,13 @@
+project:
+  type: book
+  output-dir: docs
+  
+book:
+  title: Data Gathering
+  author: Wendi Chu
+  chapters:
+    - index.ipynb
+
+format:
+  html:
+    theme: united
