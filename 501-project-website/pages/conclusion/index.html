@@ -8,7 +8,7 @@
 
 <meta name="author" content="Wendi Chu">
 
-<title>Data Gathering</title>
+<title>Conclusion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Data Gathering</h1>
+      <h1 class="quarto-secondary-nav-title">Conclusion</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Data Gathering</a> 
+      <a href="./">Conclusion</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Gathering</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conclusion</span></a>
   </div>
 </li>
     </ul>
@@ -153,17 +153,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#data-gathering" id="toc-data-gathering" class="nav-link active" data-scroll-target="#data-gathering">Data Gathering</a>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link active" data-scroll-target="#conclusion">Conclusion</a>
   <ul class="collapse">
-  <li><a href="#introduction-of-data-gathering" id="toc-introduction-of-data-gathering" class="nav-link" data-scroll-target="#introduction-of-data-gathering">Introduction of data gathering</a></li>
-  <li><a href="#data-gathering-process" id="toc-data-gathering-process" class="nav-link" data-scroll-target="#data-gathering-process">Data gathering process</a>
+  <li><a href="#summary-of-each-section" id="toc-summary-of-each-section" class="nav-link" data-scroll-target="#summary-of-each-section">Summary of each section</a>
   <ul class="collapse">
-  <li><a href="#us-monthly-transportation-statistics" id="toc-us-monthly-transportation-statistics" class="nav-link" data-scroll-target="#us-monthly-transportation-statistics">1. US Monthly Transportation Statistics</a></li>
-  <li><a href="#text-data-from-twitter-api" id="toc-text-data-from-twitter-api" class="nav-link" data-scroll-target="#text-data-from-twitter-api">2. Text data from Twitter API</a></li>
-  <li><a href="#travel-mode-choice-data" id="toc-travel-mode-choice-data" class="nav-link" data-scroll-target="#travel-mode-choice-data">3. Travel mode choice data</a></li>
-  <li><a href="#driving-behavior-data" id="toc-driving-behavior-data" class="nav-link" data-scroll-target="#driving-behavior-data">4. Driving behavior data</a></li>
-  <li><a href="#taxi-price-data" id="toc-taxi-price-data" class="nav-link" data-scroll-target="#taxi-price-data">5. Taxi price data</a></li>
+  <li><a href="#eda-part" id="toc-eda-part" class="nav-link" data-scroll-target="#eda-part">1. EDA part</a></li>
+  <li><a href="#naive-bayes-part" id="toc-naive-bayes-part" class="nav-link" data-scroll-target="#naive-bayes-part">2. Naive Bayes part</a></li>
+  <li><a href="#svm-part" id="toc-svm-part" class="nav-link" data-scroll-target="#svm-part">3. SVM part</a></li>
+  <li><a href="#decision-tree-part" id="toc-decision-tree-part" class="nav-link" data-scroll-target="#decision-tree-part">4. Decision tree part</a></li>
+  <li><a href="#clustering-part" id="toc-clustering-part" class="nav-link" data-scroll-target="#clustering-part">5. Clustering part</a></li>
+  <li><a href="#arm-part" id="toc-arm-part" class="nav-link" data-scroll-target="#arm-part">6. ARM part</a></li>
   </ul></li>
+  <li><a href="#general-conclusion" id="toc-general-conclusion" class="nav-link" data-scroll-target="#general-conclusion">General Conclusion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -173,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data Gathering</h1>
+<h1 class="title d-none d-lg-block">Conclusion</h1>
 </div>
 
 
@@ -194,86 +195,76 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="data-gathering" class="level1">
-<h1>Data Gathering</h1>
-<section id="introduction-of-data-gathering" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-of-data-gathering">Introduction of data gathering</h2>
-<p>Data gathering is known as the process to collect and analyze data from various sources in order to find answers to data science problems. In this page, I will introduce the whole process of gathering valuable data for this project, ranging from the raw data source to basic images that illustrates these datasets.</p>
-<p>Transportation is a relatively big and abstract topic. In order to answer the data science questions about this topic, I need to find different kinds of datasets. The first dimension is different types of data. To be specific, there are many different types of datasets, including labeled data, qualitative data, quantitative data, temporal data, text data, Geo data, etc. This study will cover three different types: record data, text data and temporal data. The second dimension is different scales of data. It is known to all, transportation is so important that it not only influences the life of every single person, but plays a big role in a country’s macro-economy as well. Therefore, to systematically understanding the role of transportation, it is appropriate to use both “big scale data” about economy and government and “small scale data” about citizens and everyday life at the same time.</p>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<section id="summary-of-each-section" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-each-section">Summary of each section</h2>
+<p>In this part, I will review the whole project and respectively present the conclusions of each section in the project.</p>
+<section id="eda-part" class="level3">
+<h3 class="anchored" data-anchor-id="eda-part">1. EDA part</h3>
+<p>From the tab of “Exploring Data”, we have acquired these two wordcloud. The first one comes from the tweets about freeway while the second one comes from those about metro.</p>
+<p><img src="p1.png" class="img-fluid"></p>
+<p><img src="p2.png" class="img-fluid"></p>
+<p>From the wordcloud of “freeway”, we can find words like traffic, car and driving, because freeway is built for cars to drive and sometimes people may encounter the traffic jam. By contrast, the wordcloud of “metro” contains words including train and station rather than words relevant to driving. It makes sense because metro has stations and specific routes, similar to the train.</p>
+<p>Generally speaking, people’s comments towards different means of transportation vary a lot in the aspect of vocabulary use.</p>
 </section>
-<section id="data-gathering-process" class="level2">
-<h2 class="anchored" data-anchor-id="data-gathering-process">Data gathering process</h2>
-<section id="us-monthly-transportation-statistics" class="level3">
-<h3 class="anchored" data-anchor-id="us-monthly-transportation-statistics">1. US Monthly Transportation Statistics</h3>
-<p>The data is downloaded from Kaggle and is originally from the U.S. Department of Transportation Bureau of Transportation Statistics. The Bureau of Transportation Statistics brings together the latest data from across the Federal government and transportation industry. This table contains mainly quantitative data and temporal data. There are many columns involving important data for the project, such as Highway Vehicle Miles Traveled, State and Local Government Construction Spending. Obviously, this is a typical “big scale data” defined above. Here’s a screenshot of this table.</p>
-<p><img src="images1/data1.png" width="1000" height="500"></p>
-<p>From this screenshot of the data, we can easily find that every row represent a single day while every column contains different variables of record data related to transportation of the whole nation.</p>
-<p>Link to download this data:<br>
-https://www.kaggle.com/datasets/thaddeussegura/us-monthly-transportation-statistics/download?datasetVersionNumber=1</p>
+<section id="naive-bayes-part" class="level3">
+<h3 class="anchored" data-anchor-id="naive-bayes-part">2. Naive Bayes part</h3>
+<p>In this section, we have utilized Naive Bayes for both text data from Twitter and record data about travel mode choice.</p>
+<p><img src="p3.png" class="img-fluid"></p>
+<p>This visualization above is a 3-D scatter plot of the distribution of first three principle component after PCA. We can see that there exists obvious difference in data distribution of two labels of data.</p>
+<p>In further modeling part, we reach an accuracy of 93.9% on the testing dataset, which means Naive Bayes model perform quite well to classify tweets about to different topics.</p>
+<p><img src="p4.png" class="img-fluid"></p>
+<p>This heat map represents for the final confusion matrix of the prediction result of record data using Naive Bayes model. The accuracy on test data is 74%, indicating that the Naive Bayes model did a good job on classification task for this three-category dataset.</p>
 </section>
-<section id="text-data-from-twitter-api" class="level3">
-<h3 class="anchored" data-anchor-id="text-data-from-twitter-api">2. Text data from Twitter API</h3>
-<p>I use Twitter API to respectively acquire searching results of “freeway” and “metro”. This is obviously text data and it contains users’ text documents in their tweets.</p>
-<p>Tweets about “freeway” is as follows:</p>
-<p><img src="images1/tweet_freeway.jpeg" width="800" height="500"></p>
-<p>Tweets about “metro” is as follows:</p>
-<p><img src="images1/tweet_metro.jpeg" width="800" height="500"></p>
-<p>According to these two screenshots, we can see that the data contains many characters that are difficult to process, like emojis. Thus, in further analysis of this data, I will first drop out the unwanted characters and also do some other data cleaning process for this text data.</p>
-<p>You can find this data in my Github repository:<br>
-https://github.com/anly501/anly-501-project-WilliamChuFCB/tree/main/data<br>
-This data mentioned above is named “tweet_freeway.csv” and “tweet_metro.csv” respectively.</p>
-<p>Also, you can access to my code that utilizes API to acquire the data:<br>
-https://github.com/anly501/anly-501-project-WilliamChuFCB/tree/main/code<br>
-Relevant codes are located in “Data gathering” file.</p>
+<section id="svm-part" class="level3">
+<h3 class="anchored" data-anchor-id="svm-part">3. SVM part</h3>
+<p>In this section, I utilize SVM to train a classification model for text data acquring from Twitter API.</p>
+<p><img src="p5.png" class="img-fluid"></p>
+<p>This heat map of confusion matrix shows that SVM performs quite well on the text data. The proportion that it predicts wrong labels is very small. Actually, this SVM model reaches an accuracy of 0.93 on the test dataset.</p>
+<p>This also suggests that when we give a piece of new text data to this SVM model (note that this piece of data needs to follow a similar distribution of the training data), the SVM model can recognize whether it relates to “freeway” or “metro” with a really high accuracy.</p>
+<p>In this data modeling process, I actually only need to consider a binary classification problem. In more complicated situation, sometimes we have to deal with those data that contains more than two catagories. For example, there might be classes like “car”, “bus”, “airplane” and “ship”. Under this circumstance, we need to be more careful optimizing and tuning the model.</p>
 </section>
-<section id="travel-mode-choice-data" class="level3">
-<h3 class="anchored" data-anchor-id="travel-mode-choice-data">3. Travel mode choice data</h3>
-<p>This dataset comes from statsmodels.org. It contains information of passengers’ different choice of travel mode.</p>
-<p>The meanings of variables are as follows:<br>
-TTME - terminal waiting time<br>
+<section id="decision-tree-part" class="level3">
+<h3 class="anchored" data-anchor-id="decision-tree-part">4. Decision tree part</h3>
+<p>In this part, I have used decision tree model to predict the travel mode choice based on a series numeric variables:</p>
+<p>TTME - terminal waiting time<br>
 INVC - in vehicle cost for all stages<br>
 INVT - travel time (in-vehicle time) for all stages<br>
 GC - generalized cost measure:invc+(invt*value of travel time savings)<br>
 HINC - household income<br>
 PSIZE - traveling group size</p>
-<p><img src="images1/travel_mode.jpeg" width="500" height="700"></p>
-<p>From this screenshot, we can see that this data is a typical record data for classificaiton. In further analysis process, it is proper to utilize a series of different types of machine learning algorithms to do the classification.</p>
-<p>You can find the data here:<br>
-https://www.statsmodels.org/dev/datasets/generated/modechoice.html</p>
+<p><img src="p6.png" class="img-fluid"></p>
+<p>This is the result of tree plot that uses the optimal hyperparameters after tuning. The accuracy of this model on the test data is 0.84, indicating that this decision tree model performs well and does not overfit the training data.</p>
+<p>One advantage of decision tree model is that the result of this tree model is interpretable. For instance, from the tree plot above we notice that in the root node, the model split this data by “whether total travel time 211 minutes”. It makes sense that taking the train or long distance bus cost much more time than airplane, that’s why we immediately get a pure leaf under this root node.</p>
+<p>However, this data set is relatively small, and therefore the decision tree model might not be robust and stable enough. In future research, it will be a possible way to first do some data augmentation.</p>
 </section>
-<section id="driving-behavior-data" class="level3">
-<h3 class="anchored" data-anchor-id="driving-behavior-data">4. Driving behavior data</h3>
-<p>This is a kaggle dataset about driving behavior. Aggressive driving behavior is the leading factor of road traffic accidents. Aggressive driving includes speeding, sudden breaks and sudden left or right turns. All these events are reflected on accelerometer and gyroscope data. This dataset contains value at different directions of accelerometer and gyroscope.</p>
-<p><img src="images1/driving_behavior.jpeg" width="500" height="560"></p>
-<p>Obviously, this is also a record data ideal for classification. The target variable “Class” has three different categories: Normal, Aggressive and Slow. It is possible to train a classification model to predict the driving behavior type based on accelerometer and gyroscope data.</p>
-<p>You can find this data here:<br>
-https://www.kaggle.com/datasets/outofskills/driving-behavior?select=train_motion_data.csv</p>
+<section id="clustering-part" class="level3">
+<h3 class="anchored" data-anchor-id="clustering-part">5. Clustering part</h3>
+<p>In this section, I have utilized three different types of clustering algorithms, k-means, DBSCAN, and hierarchical clustering to train the model. To be noticed, different from sections above, clustering is an unsupervised algorithms that does not rely on the target labels.</p>
+<p><img src="p7.png" class="img-fluid"></p>
+<p>This is the clustering result of Agglomerative clustering. This 2-D scatter plot shows the distribution and clustering result on two dimensions of the X features. It is obviously that the model have successfully splitted those data points into three distinct groups.</p>
+<p>Then we are interested to discuss whether the three clusters output by the algorithms coincide with the original true labels of the dataset.</p>
+<p><img src="p8.png" class="img-fluid"></p>
+<p>To our surprise, the result shows that the group categories predicted by clustering algorithms do not coincide with the true label perfectly.</p>
+<p>The inconsistency of clustering result and the true labels can be interpreted as follows. The true labels represents for three different choice of travel mode: air, bus and train. These people’s travel data may also includes some hidden pattern other than travel mode choice. For instance, perhaps these three clusters acquired by algorithms represent for passengers with different types, partitioned by a feature that does not exist in the dataset, like age or occupation.</p>
 </section>
-<section id="taxi-price-data" class="level3">
-<h3 class="anchored" data-anchor-id="taxi-price-data">5. Taxi price data</h3>
-<p>This is a kaggle data about taxi price and is originally provided by an Indian cab aggregator service Sigma Cabs. This data is ideal for building a predictive model, which could help predict the surgepricingtype pro-actively. This would in turn match the right cabs with the right customers quickly and efficiently.</p>
-<p>The meanings of different variables are as follows:</p>
-<ul>
-<li>Trip_ID: ID for TRIP</li>
-<li>Trip_Distance: The distance for the trip requested by the customer</li>
-<li>TypeofCab: Category of the cab requested by the customer</li>
-<li>CustomerSinceMonths: Customer using cab services since n months; 0 month means current month</li>
-<li>LifeStyleIndex: Proprietary index created by Sigma Cabs showing lifestyle of the customer based on their behaviour</li>
-<li>ConfidenceLifeStyle_Index: Category showing confidence on the index mentioned above</li>
-<li>Destination_Type: Sigma Cabs divides any destination in one of the 14 categories.</li>
-<li>Customer_Rating: Average of life time ratings of the customer till date</li>
-<li>CancellationLast1Month: Number of trips cancelled by the customer in last 1 month</li>
-<li>Var1, Var2 and Var3: Continuous variables masked by the company. Can be used for modelling purposes</li>
-<li>Gender: Gender of the customer</li>
-<li>SurgePricingType: Target (can be of 3 types)</li>
-</ul>
-<p><img src="images1/taxi.jpeg" width="800" height="500"></p>
-<p>From this screenshot, we can see that there exist many missing values. Data cleaning and dealing with those missing values must be taken into consideration.</p>
-<p>You can find this data here:<br>
-https://www.kaggle.com/datasets/arashnic/taxi-pricing-with-mobility-analytics?select=sigma_cabs.csv</p>
+<section id="arm-part" class="level3">
+<h3 class="anchored" data-anchor-id="arm-part">6. ARM part</h3>
+<p>In this section, I have used ARM and networking to perform on the text data.</p>
+<p><img src="p9.png" class="img-fluid"></p>
+<p>With the help of ARM, we can know which words often occurs together in people’s tweets, and we can possibly obtain the hidden relation between different words.</p>
+</section>
+</section>
+<section id="general-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="general-conclusion">General Conclusion</h2>
+<p>According to all the analysis and discussion in this study, I am more able to answer the data science questions proposed at the beginning.</p>
+<p>Travel time, terminal waiting time, vehicle cost, household income are all important factors contribute to people’s choice of transportation mode. Among these variables, travel time seems to have the highest relationship with the travel mode choice. After the statistical analysis, travel group size are not as important as other factors mentioned above.</p>
+<p>As for people’s comments on the Internet, it is absolutely that people’s vocabulary use varies a lot towards different types of transportation. Additionally, the sentiment of the tweets also seems to be different. For example, the average sentiment of tweets shows that comments about “metro” tend to be more neutral compared to those about “freeway”.</p>
+<p>Since COVID-19 pandemic broke in 2020, the total ridership and turnover of public transportation drop significantly according to the US Monthly Transportation Statistics.</p>
+<p>Finally, this study shows that it is possible to utilize different kinds of machine learning algorithms to predict people’s travel mode choice based on the passengers’ travel information. This may be used in companies of transportation industry. For instance, those companies can obtain uses’s data about travel habit and other travel information through their APPs. Then, they can establish a series of data models to automatically recommend the optimal travel choice that takes time, money, convenience and travel habits in an integrated consideration, which might elevate users’ travel experience.</p>
 
 
-</section>
 </section>
 </section>
 
